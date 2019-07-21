@@ -7,7 +7,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     let result;
     it('should select Short-Term Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.EntryTimeTextBox.setValue('01:00');
         CalculatorPage.ExitTimeTextBox.setValue('02:00');
         CalculatorPage.EntryDate.setValue('01/01/2020');
@@ -20,7 +19,6 @@ describe('Parking Calculator page Calculate cost',()=>{
 
     it('should select Economy Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(1);
         CalculatorPage.EntryTimeTextBox.setValue('02:00');
         CalculatorPage.ExitTimeTextBox.setValue('03:00');
@@ -33,7 +31,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Long-Term Surface Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(2);
         CalculatorPage.EntryTimeTextBox.setValue('04:00');
         CalculatorPage.ExitTimeTextBox.setValue('05:00');
@@ -46,7 +43,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Long-Term Surface Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(3);
         CalculatorPage.EntryTimeTextBox.setValue('06:00');
         CalculatorPage.ExitTimeTextBox.setValue('07:00');
@@ -59,7 +55,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Valet Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(4);
         CalculatorPage.EntryTimeTextBox.setValue('08:00');
         CalculatorPage.ExitTimeTextBox.setValue('09:00');

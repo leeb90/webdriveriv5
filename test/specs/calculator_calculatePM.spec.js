@@ -7,7 +7,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     let result;
     it('should select Short-Term Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();
         CalculatorPage.EntryTimeTextBox.setValue('13:00');
@@ -22,7 +21,6 @@ describe('Parking Calculator page Calculate cost',()=>{
 
     it('should select Economy Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(1);
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();
@@ -37,7 +35,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Long-Term Surface Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(2);
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();
@@ -52,7 +49,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Long-Term Surface Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(3);
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();
@@ -67,7 +63,6 @@ describe('Parking Calculator page Calculate cost',()=>{
     });
     it('should select Valet Parking AM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         CalculatorPage.LotOptionSelector.selectByIndex(4);
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();

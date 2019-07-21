@@ -5,7 +5,6 @@ const LotContentValues= require ('../../helpers/testdata').LotContentValues;
 describe('Parking Calculator page Combobox validations',()=>{
     it('should check combobox Amount',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
-        browser.pause(2000);
         let LotOptionsAmount= CalculatorPage.LotOptions.length;
         expect(LotOptionsAmount,'Expects Choose Lot Options to have 5 elements').to.equal(5);
     });
