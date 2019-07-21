@@ -3,6 +3,7 @@ const CalculatorPage = require('../../calculator.pageobjects');
 describe('Parking Calculator Time Error Messages',()=>{
     let ErrorMessageFormat='ERROR! ENTER A CORRECTLY FORMATTED TIME';
     let ErrorMessageTime='ERROR! YOUR EXIT DATE OR TIME IS BEFORE YOUR ENTRY DATE OR TIME';
+    let TimeFormatRegex= /([01]?[0-9]|2[0-3]):[0-5][0-9]/g;
     it('should check error message when invalid time is filled',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         browser.pause(2000);
@@ -14,7 +15,7 @@ describe('Parking Calculator Time Error Messages',()=>{
         expect(CalculatorPage.CalculateCost.getText(),'No calculation should be done and error message should appear').to.equal(ErrorMessageFormat);
     });
 
-    it('should check time format',()=>{
+    it('should check time format HH:MM',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         browser.pause(2000);
         CalculatorPage.EntryTimeTextBox.setValue('1231232');
