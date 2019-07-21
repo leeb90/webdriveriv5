@@ -23,7 +23,11 @@ describe('Parking Calculator Time Error Messages',()=>{
         CalculatorPage.EntryDate.setValue('07/21/2020');
         CalculatorPage.ExitDate.setValue('07/21/2020');
         CalculatorPage.CalculateButton.click();
-        expect(CalculatorPage.CalculateCost.getText(),'No calculation should be done and error message should appear').to.equal(ErrorMessage);
+        let EntryValue= CalculatorPage.EntryTimeTextBox.getValue();
+        let ExitValue= CalculatorPage.ExitTimeTextBox.getValue();
+        expect(EntryValue.length, 'Time format for Entry time should consist of only 4 numbers').to.equal(5);
+        expect(ExitValue.length, 'Time format for Exit time should consist of only 4 numbers').to.equal(5)
+
     });
 
 });
