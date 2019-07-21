@@ -20,7 +20,7 @@ exports.config = {
     // directory is where your package.json resides, so `wdio` will be called from there.
     //
     specs: [
-        './test/specs/**/calculator_combobox.spec.js'
+        './test/specs/**/calculator_dateerrormessages.spec.js'
     ],
     // Patterns to exclude.
     exclude: [
