@@ -5,7 +5,8 @@ const LotContentValues= require ('../../helpers/testdata').LotContentValues;
 describe('Parking Calculator page Calculate cost',()=>{
     let TotalCost;
     let result;
-    it('should select Short-Term Parking AM time',()=>{
+    //TODO: TO CREATE A FUNCTION TO RANDOM CHOOSE DATES AND HOURS
+    it('should select Short-Term Parking PM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         CalculatorPage.EntryTimePMRadioButton.click();
         CalculatorPage.ExitTimePMRadioButton.click();
@@ -19,7 +20,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         expect(result).to.equal('2.00');
     });
 
-    it('should select Economy Parking AM time',()=>{
+    it('should select Economy Parking PM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         CalculatorPage.LotOptionSelector.selectByIndex(1);
         CalculatorPage.EntryTimePMRadioButton.click();
@@ -33,7 +34,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
         expect(result).to.equal('4.00');
     });
-    it('should select Long-Term Surface Parking AM time',()=>{
+    it('should select Long-Term Surface Parking PM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         CalculatorPage.LotOptionSelector.selectByIndex(2);
         CalculatorPage.EntryTimePMRadioButton.click();
@@ -47,7 +48,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
         expect(result).to.equal('2.00');
     });
-    it('should select Long-Term Surface Parking AM time',()=>{
+    it('should select Long-Term Garage Parking PM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         CalculatorPage.LotOptionSelector.selectByIndex(3);
         CalculatorPage.EntryTimePMRadioButton.click();
@@ -61,7 +62,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
         expect(result).to.equal('2.00');
     });
-    it('should select Valet Parking AM time',()=>{
+    it('should select Valet Parking PM time',()=>{
         CalculatorPage.open('http://adam.goucher.ca/parkcalc/');
         CalculatorPage.LotOptionSelector.selectByIndex(4);
         CalculatorPage.EntryTimePMRadioButton.click();

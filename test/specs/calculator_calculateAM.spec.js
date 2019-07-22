@@ -1,8 +1,7 @@
 const expect= require('chai').expect;
 const CalculatorPage = require('../../calculator.pageobjects');
-const LotContent= require ('../../helpers/testdata').LotContent;
-const LotContentValues= require ('../../helpers/testdata').LotContentValues;
-describe('Parking Calculator page Calculate cost',()=>{
+let regex=/[!@#$%^&*' ']/g;
+describe('Parking Calculator page Calculate cost with AM time',()=>{
     let TotalCost;
     let result;
     it('should select Short-Term Parking AM time',()=>{
@@ -13,7 +12,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         CalculatorPage.ExitDate.setValue('01/01/2020');
         CalculatorPage.CalculateButton.click();
         TotalCost=CalculatorPage.CalculateCost.getText();
-        result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
+        result= TotalCost.replace(regex, "");
         expect(result).to.equal('2.00');
     });
 
@@ -26,7 +25,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         CalculatorPage.ExitDate.setValue('01/02/2020');
         CalculatorPage.CalculateButton.click();
         TotalCost=CalculatorPage.CalculateCost.getText();
-        result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
+        result= TotalCost.replace(regex, "");
         expect(result).to.equal('4.00');
     });
     it('should select Long-Term Surface Parking AM time',()=>{
@@ -38,7 +37,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         CalculatorPage.ExitDate.setValue('01/03/2020');
         CalculatorPage.CalculateButton.click();
         TotalCost=CalculatorPage.CalculateCost.getText();
-        result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
+        result= TotalCost.replace(regex, "");
         expect(result).to.equal('2.00');
     });
     it('should select Long-Term Surface Parking AM time',()=>{
@@ -50,7 +49,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         CalculatorPage.ExitDate.setValue('01/04/2020');
         CalculatorPage.CalculateButton.click();
         TotalCost=CalculatorPage.CalculateCost.getText();
-        result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
+        result= TotalCost.replace(regex, "");
         expect(result).to.equal('2.00');
     });
     it('should select Valet Parking AM time',()=>{
@@ -62,7 +61,7 @@ describe('Parking Calculator page Calculate cost',()=>{
         CalculatorPage.ExitDate.setValue('01/05/2020');
         CalculatorPage.CalculateButton.click();
         TotalCost=CalculatorPage.CalculateCost.getText();
-        result= TotalCost.replace(/[!@#$%^&*' ']/g, "");
+        result= TotalCost.replace(regex, "");
         expect(result).to.equal('12.00');
     });
 });
